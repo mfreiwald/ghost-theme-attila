@@ -6,12 +6,10 @@ on:
       - main
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@master
       - uses: TryGhost/action-deploy-theme@v1.5.0
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
-          theme-name: "attila - mfreiwald"
-
